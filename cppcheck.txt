@@ -1,0 +1,1 @@
+[main/test.cc:14]: (style) The scope of the variable 'f' can be reduced.
