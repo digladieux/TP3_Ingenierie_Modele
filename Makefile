@@ -1,4 +1,4 @@
-all : exe/question2 
+all : help 
 
 .PHONY : clean help
 
@@ -17,7 +17,7 @@ help: ## Display the availables commands
 check: ## Clean the quality of the code
 	@cppcheck --enable=style -i src/ main/  2> cppcheck.txt 
 
-exe/question2 : build/main_subject.o build/generation_words.o build/monte_carlo.o
+exe/subject : build/main_subject.o build/generation_words.o build/monte_carlo.o ## Executable to respond to the questions
 	$(CREATE_FOLDER_EXE) && $(CXX) $(GENERATE_EXE) $(LIBRAIRIES)  -pthread
 
 build/main_subject.o : main/main_subject.cpp 
@@ -29,7 +29,7 @@ build/generation_words.o : src/generation_words.cpp
 build/monte_carlo.o : src/monte_carlo.cpp
 	$(CREATE_FOLDER_BUILD) && $(CXX) $(GENERATE_O) $(INCLUDE) 
 
-exe/question1 : build/test.o
+exe/question1 : build/test.o ## Question 1
 	$(CREATE_FOLDER_EXE) && $(CXX) $(GENERATE_EXE) $(LIBRAIRIES) 
 
 build/test.o : main/test.cc
