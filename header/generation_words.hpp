@@ -1,9 +1,15 @@
 #pragma once
 
+#include "../Random/CLHEP/Random/MTwistEngine.h"
+#include <string>
 class GenerationsWords {
     public :
-        explicit GenerationsWords(char* dico) ;
-        const char* generateWord(short int word_size) const;
+        explicit GenerationsWords(const std::string& dico) ;
+        std::string generateWord(short int word_size);
     private :
-        char * dictionnary ;
+        std::string dictionnary ;
+        CLHEP::MTwistEngine mercenneTwister{};
+
+
 };
+
