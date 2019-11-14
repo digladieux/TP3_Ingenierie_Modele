@@ -18,7 +18,7 @@
  * 
  * @param status The status to copy for MonteCarlo
  */
-MonteCarlo::MonteCarlo(const StatusMT& status) : status_mt(status_mt) {}
+MonteCarlo::MonteCarlo(const StatusMT& status) : status_mt(status) {}
 
 /**
  * @brief Launch the function to recover the status of MT
