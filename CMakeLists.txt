@@ -6,13 +6,13 @@ set(CMAKE_CXX_FLAGS "-pthread -O2 -msse2 -fpermissive")
 
 set(HEADERS
     header/generation_words.hpp
-    header/generation_status.hpp
+    header/status_mt.hpp
     header/monte_carlo.hpp
 )
 
 set(SOURCES
     src/generation_words.cpp
-    src/generation_status.cpp
+    src/status_mt.cpp
     src/monte_carlo.cpp
 
 )

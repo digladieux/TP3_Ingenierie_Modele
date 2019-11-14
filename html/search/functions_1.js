@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['generateword',['generateWord',['../classGenerationsWords.html#a4dd6b2f15414796f87121ad67edeb00c',1,'GenerationsWords']]],
-  ['generationswords',['GenerationsWords',['../classGenerationsWords.html#a8e3208b27c01307ca67ae78ad38f2fce',1,'GenerationsWords']]]
+  ['doublealmostequal',['doubleAlmostEqual',['../main__subject_8cpp.html#af97d03642cb230cfe2c67890938bd632',1,'doubleAlmostEqual(double a, double b):&#160;status_mt.cpp'],['../status__mt_8cpp.html#af97d03642cb230cfe2c67890938bd632',1,'doubleAlmostEqual(double a, double b):&#160;status_mt.cpp']]]
 ];

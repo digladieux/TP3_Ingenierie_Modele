@@ -1,15 +1,23 @@
 /**
- * \file monte_carlo.hpp
- * \brief Fichier d'en tete de monte_carlo.c
- * \author GLADIEUX CUNHA Dimitri
- * \date 17 Octobre 2019
+ * @file monte_carlo.hpp
+ * @author Gladieux Cunha Dimitri (cdimitri@orange.fr)
+ * @brief Fichier d'en tete de monte_carlo.cpp
+ * @version 1.0
+ * @date 14-11-2019
+ * 
+ * @copyright Copyright (c) 2019
+ * 
  */
-
 #pragma once
-#include "generation_status.hpp"
+#include "status_mt.hpp"
+
+/**
+ * @brief Class MonteCarlo pour la generation de cette experience avec l'utilisation de Mercenne Twister
+ * 
+ */
 class MonteCarlo {
   public:
-    MonteCarlo(const GenerationStatus& generate_status);
+    MonteCarlo(const StatusMT& status);
     MonteCarlo(const MonteCarlo&) = delete;
     MonteCarlo(const MonteCarlo&&) = delete;
     void nExperiencesMonteCarlo();
@@ -17,5 +25,5 @@ class MonteCarlo {
     void recoverStatusMT(int index);
 
   private:
-    GenerationStatus gs;
+    StatusMT status_mt;
 };

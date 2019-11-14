@@ -67,39 +67,70 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main_subject.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="generation__words_8hpp_source.html">../header/generation_words.hpp</a>&quot;</code><br />
+
+<p>Fichier principal du programme principal.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="status__mt_8hpp_source.html">../header/status_mt.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="generation__words_8hpp_source.html">../header/generation_words.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="monte__carlo_8hpp_source.html">../header/monte_carlo.hpp</a>&quot;</code><br />
-<code>#include &quot;CLHEP/Random/MTwistEngine.h&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0129b6bf53fa9a4ea51dbddf8426db11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a0129b6bf53fa9a4ea51dbddf8426db11">Question2</a> (long long int nb_numbers, int nb_files)</td></tr>
-<tr class="separator:a0129b6bf53fa9a4ea51dbddf8426db11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb05c7c4305a567f39adf7fb61f9204b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#afb05c7c4305a567f39adf7fb61f9204b">Question2_1</a> (int nb_numbers, int nb_files)</td></tr>
-<tr class="separator:afb05c7c4305a567f39adf7fb61f9204b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b3a47fa460897620dd14f23fe769317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a4b3a47fa460897620dd14f23fe769317">Question2_2</a> (int nb_numbers, const char *file_name)</td></tr>
-<tr class="separator:a4b3a47fa460897620dd14f23fe769317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11bd3a14f0fbea89746bb1247b638680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a11bd3a14f0fbea89746bb1247b638680">Question2_3</a> (int threads_number, long long int nb_iterations)</td></tr>
-<tr class="separator:a11bd3a14f0fbea89746bb1247b638680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8063a467a9e8d86049909a1b42187834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a8063a467a9e8d86049909a1b42187834">Question4</a> ()</td></tr>
-<tr class="separator:a8063a467a9e8d86049909a1b42187834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a39b187c76108ba3e8b74b5d2259bc6fe">Question2</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launching the Question 2.  <a href="#a39b187c76108ba3e8b74b5d2259bc6fe">More...</a><br /></td></tr>
+<tr class="separator:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaee414b6d222cb9c00f09d09741e392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#aeaee414b6d222cb9c00f09d09741e392">Question2_1</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:aeaee414b6d222cb9c00f09d09741e392"><td class="mdescLeft">&#160;</td><td class="mdescRight">QUESTION 2.1. Generate 10 status and save it inside Status/*. Save also the number generated in Numbers/*.  <a href="#aeaee414b6d222cb9c00f09d09741e392">More...</a><br /></td></tr>
+<tr class="separator:aeaee414b6d222cb9c00f09d09741e392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a977e11b1ccc9ae4b67ed30c3b8ddcb97">Question2_2AND3</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">QUESTION 2.2 AND QUESTION 3. Check if we can recover all the status and check if we have generated the same number.  <a href="#a977e11b1ccc9ae4b67ed30c3b8ddcb97">More...</a><br /></td></tr>
+<tr class="separator:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a5752cf507f3f1ca6f5ad6abc284e8f8c">Question2_3</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 2_3. We launch 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 10 iterations inside 10 threads.  <a href="#a5752cf507f3f1ca6f5ad6abc284e8f8c">More...</a><br /></td></tr>
+<tr class="separator:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a06e84ff5a751754b451d0754ace4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a27a06e84ff5a751754b451d0754ace4e">Question4</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:a27a06e84ff5a751754b451d0754ace4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 4. Generation of 10 status with 1 000 000 000 &amp; Generation of 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 1 000 000 000.  <a href="#a27a06e84ff5a751754b451d0754ace4e">More...</a><br /></td></tr>
+<tr class="separator:a27a06e84ff5a751754b451d0754ace4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c032cc02d875e53e112751b13edd7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#af9c032cc02d875e53e112751b13edd7e">Question5_B</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:af9c032cc02d875e53e112751b13edd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 5.B. Same algorithm as the Question 4, but using threads.  <a href="#af9c032cc02d875e53e112751b13edd7e">More...</a><br /></td></tr>
+<tr class="separator:af9c032cc02d875e53e112751b13edd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf4a20ca2f29c4d639f517354085a1e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#aaf4a20ca2f29c4d639f517354085a1e0">Question5_A</a> ()</td></tr>
+<tr class="memdesc:aaf4a20ca2f29c4d639f517354085a1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 5.A. Find the word gattaca with the dictionnary acgtand give some statistic.  <a href="#aaf4a20ca2f29c4d639f517354085a1e0">More...</a><br /></td></tr>
 <tr class="separator:aaf4a20ca2f29c4d639f517354085a1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeded9a1e43fd19cd3f87db437c9636ae"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#aeded9a1e43fd19cd3f87db437c9636ae">CountGenerationWord</a> (const char *dictionnary, const char *word_to_find)</td></tr>
-<tr class="separator:aeded9a1e43fd19cd3f87db437c9636ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97d03642cb230cfe2c67890938bd632"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#af97d03642cb230cfe2c67890938bd632">doubleAlmostEqual</a> (double a, double b)</td></tr>
+<tr class="memdesc:af97d03642cb230cfe2c67890938bd632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Savoir si 2 doubles sont egaux.  <a href="#af97d03642cb230cfe2c67890938bd632">More...</a><br /></td></tr>
+<tr class="separator:af97d03642cb230cfe2c67890938bd632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8766aa8a94571480a9ce97d3bde3dd67"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a8766aa8a94571480a9ce97d3bde3dd67">CountGenerationWord</a> (const std::string &amp;dictionnary, const std::string &amp;word_to_find)</td></tr>
+<tr class="separator:a8766aa8a94571480a9ce97d3bde3dd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main of the program.  <a href="#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a642e42e634fb64fad6c35d179754a3d0"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a642e42e634fb64fad6c35d179754a3d0">mutex_output</a></td></tr>
+<tr class="separator:a642e42e634fb64fad6c35d179754a3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aeded9a1e43fd19cd3f87db437c9636ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeded9a1e43fd19cd3f87db437c9636ae">&#9670;&nbsp;</a></span>CountGenerationWord()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Fichier principal du programme principal. </p>
+<dl class="section author"><dt>Author</dt><dd>Gladieux Cunha Dimitri (<a href="#" onclick="location.href='mai'+'lto:'+'cdi'+'mi'+'tri'+'@o'+'ran'+'ge'+'.fr'; return false;">cdimi<span style="display: none;">.nosp@m.</span>tri@<span style="display: none;">.nosp@m.</span>orang<span style="display: none;">.nosp@m.</span>e.fr</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14-11-2019 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2019 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a8766aa8a94571480a9ce97d3bde3dd67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8766aa8a94571480a9ce97d3bde3dd67">&#9670;&nbsp;</a></span>CountGenerationWord()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,13 +138,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">unsigned long long int CountGenerationWord </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>dictionnary</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>word_to_find</em>&#160;</td>
         </tr>
         <tr>
@@ -123,6 +154,46 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="af97d03642cb230cfe2c67890938bd632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97d03642cb230cfe2c67890938bd632">&#9670;&nbsp;</a></span>doubleAlmostEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool doubleAlmostEqual </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Savoir si 2 doubles sont egaux. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>1er nombre </td></tr>
+    <tr><td class="paramname">b</td><td>2eme nombre </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Les nombres sont egaux </dd>
+<dd>
+false Les nombres sont differents </dd></dl>
 
 </div>
 </div>
@@ -152,10 +223,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Main of the program. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Number of argument </td></tr>
+    <tr><td class="paramname">argv</td><td>Arguments in command line </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int The error number </dd></dl>
+
 </div>
 </div>
-<a id="a0129b6bf53fa9a4ea51dbddf8426db11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0129b6bf53fa9a4ea51dbddf8426db11">&#9670;&nbsp;</a></span>Question2()</h2>
+<a id="a39b187c76108ba3e8b74b5d2259bc6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b187c76108ba3e8b74b5d2259bc6fe">&#9670;&nbsp;</a></span>Question2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,27 +244,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void Question2 </td>
           <td>(</td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>nb_numbers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="classStatusMT.html">StatusMT</a> &amp;&#160;</td>
+          <td class="paramname"><em>status_mt</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nb_files</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Launching the Question 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="afb05c7c4305a567f39adf7fb61f9204b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb05c7c4305a567f39adf7fb61f9204b">&#9670;&nbsp;</a></span>Question2_1()</h2>
+<a id="aeaee414b6d222cb9c00f09d09741e392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaee414b6d222cb9c00f09d09741e392">&#9670;&nbsp;</a></span>Question2_1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,55 +270,51 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void Question2_1 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nb_numbers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="classStatusMT.html">StatusMT</a> &amp;&#160;</td>
+          <td class="paramname"><em>status_mt</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nb_files</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>QUESTION 2.1. Generate 10 status and save it inside Status/*. Save also the number generated in Numbers/*. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a4b3a47fa460897620dd14f23fe769317"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b3a47fa460897620dd14f23fe769317">&#9670;&nbsp;</a></span>Question2_2()</h2>
+<a id="a977e11b1ccc9ae4b67ed30c3b8ddcb97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a977e11b1ccc9ae4b67ed30c3b8ddcb97">&#9670;&nbsp;</a></span>Question2_2AND3()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Question2_2 </td>
+          <td class="memname">void Question2_2AND3 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nb_numbers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="classStatusMT.html">StatusMT</a> &amp;&#160;</td>
+          <td class="paramname"><em>status_mt</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file_name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>QUESTION 2.2 AND QUESTION 3. Check if we can recover all the status and check if we have generated the same number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a11bd3a14f0fbea89746bb1247b638680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11bd3a14f0fbea89746bb1247b638680">&#9670;&nbsp;</a></span>Question2_3()</h2>
+<a id="a5752cf507f3f1ca6f5ad6abc284e8f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5752cf507f3f1ca6f5ad6abc284e8f8c">&#9670;&nbsp;</a></span>Question2_3()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,27 +322,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void Question2_3 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>threads_number</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="classStatusMT.html">StatusMT</a> &amp;&#160;</td>
+          <td class="paramname"><em>status_mt</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>nb_iterations</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Question 2_3. We launch 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 10 iterations inside 10 threads. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a8063a467a9e8d86049909a1b42187834"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8063a467a9e8d86049909a1b42187834">&#9670;&nbsp;</a></span>Question4()</h2>
+<a id="a27a06e84ff5a751754b451d0754ace4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a06e84ff5a751754b451d0754ace4e">&#9670;&nbsp;</a></span>Question4()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,11 +348,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void Question4 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classStatusMT.html">StatusMT</a> &amp;&#160;</td>
+          <td class="paramname"><em>status_mt</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Question 4. Generation of 10 status with 1 000 000 000 &amp; Generation of 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 1 000 000 000. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -294,6 +376,49 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Question 5.A. Find the word gattaca with the dictionnary acgtand give some statistic. </p>
+
+</div>
+</div>
+<a id="af9c032cc02d875e53e112751b13edd7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c032cc02d875e53e112751b13edd7e">&#9670;&nbsp;</a></span>Question5_B()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Question5_B </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStatusMT.html">StatusMT</a> &amp;&#160;</td>
+          <td class="paramname"><em>status_mt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Question 5.B. Same algorithm as the Question 4, but using threads. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_mt</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a642e42e634fb64fad6c35d179754a3d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642e42e634fb64fad6c35d179754a3d0">&#9670;&nbsp;</a></span>mutex_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex mutex_output</td>
         </tr>
       </table>
 </div><div class="memdoc">

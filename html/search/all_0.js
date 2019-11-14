@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['countgenerationword',['CountGenerationWord',['../main__subject_8cpp.html#aeded9a1e43fd19cd3f87db437c9636ae',1,'main_subject.cpp']]]
+  ['architecture_5fid',['ARCHITECTURE_ID',['../CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]]
 ];

@@ -1,68 +1,72 @@
 /**
- * \file monte_carlo.c
- * \brief Fichier pour l'algorithme de Monte Carlo
- * \author GLADIEUX CUNHA Dimitri
- * \date 17 Octobre 2019
+ * @file monte_carlo.cpp
+ * @author Gladieux Cunha Dimitri (cdimitri@orange.fr)
+ * @brief Fichier pour l'algorithme de Monte Carlo
+ * @version 1.0
+ * @date 14-11-2019
+ * 
+ * @copyright Copyright (c) 2019
+ * 
  */
-
 #include "../header/monte_carlo.hpp"
 #include "CLHEP/Random/MTwistEngine.h"
-#include <exception>
 #include <cmath>
+#include <exception>
+
 /**
- * \fn void experiencesMonteCarlo(const int nb_experiences, const int
- * nb_iterations, char use_random_number_already_generated) \brief Methode
- * effectuant n experiences de Monte Carlo, avec m iterations. On definit si on
- * souhaite utiliser des nombres deja genere ou non. On calcul aussi l'ecart a
- * la moyenne entre les resultats experimentaux du calcul de PI et la valeur
- * theorique de ce dernier \param nb_experiences Le nombre d'experiences que
- * l'on desire \param nb_iterations Le nombre d'iterations que l'on souhaite
+ * @brief Construct a new Monte Carlo:: Monte Carlo object
+ * 
+ * @param status The status to copy for MonteCarlo
  */
+MonteCarlo::MonteCarlo(const StatusMT& status) : status_mt(status_mt) {}
 
-MonteCarlo::MonteCarlo(const GenerationStatus& generate_status) : gs(generate_status) {}
-
+/**
+ * @brief Launch the function to recover the status of MT
+ * 
+ * @param index The status you want to recover
+ */
 void MonteCarlo::recoverStatusMT(int index) {
-    this->gs.recoverStatus(index) ;
+    this->status_mt.recoverStatus(index);
 }
 
+/**
+ * @brief Methode effectuant n experiences de Monte Carlo, avec m iterations. On definit si on
+ * souhaite utiliser des nombres deja genere ou non. On calcul aussi l'ecart a
+ * la moyenne entre les resultats experimentaux du calcul de PI et la valeur
+ * theorique de ce dernier
+ *
+ */
 void MonteCarlo::nExperiencesMonteCarlo() {
     unsigned long long int i;
     double average_gap = 0;
 
-    for (i = 0; i < gs.getStatusNumber(); i++) {
+    for (i = 0; i < status_mt.getStatusNumber(); i++) {
         double pi = monteCarlo();
         double tmp = M_PI - pi;
         average_gap += tmp < 0 ? tmp * (-1) : tmp;
-        std::cout << "Step n°" << i + 1 << " - Value of Pi : " << pi
-                  << std::endl;
-        
+        std::cout << "Step n°" << i + 1 << " - Value of Pi : " << pi << std::endl;
     }
 
-    average_gap /= gs.getStatusNumber();
+    average_gap /= status_mt.getStatusNumber();
     std::cout << "Average Gap : " << average_gap << std::endl;
 }
 
 /**
- * \fn double monteCarlo(const int begin, const int end, char
- * use_random_number_already_generated)
- * \brief Fonction effectuant une experience de Monte Carlo, avec m iterations.
- * On definit si on souhaite utiliser des nombres deja genere ou non \param
- * nb_iterations Le nombre d'iterations que l'on souhaite \return La valeur
- * experimentale de PI.
+ * @brief Fonction effectuant une experience de Monte Carlo, avec m iterations.
+ * @return double La valeur experimentale de PI.
  */
 double MonteCarlo::monteCarlo() {
     unsigned long long int count = 0;
     unsigned long long int i = 0;
 
-
-    for (i = 0; i < gs.getNumbersNumber(); i++) {
-        double x = gs.getRandomNumber() ;
-        double y = gs.getRandomNumber() ;
+    for (i = 0; i < status_mt.getNumbersNumber(); i++) {
+        double x = status_mt.getRandomNumber();
+        double y = status_mt.getRandomNumber();
         double z = x * x + y * y;
         if (z <= 1) {
             count++;
         }
     }
 
-    return (double)count / gs.getNumbersNumber() * 4;
+    return (double)count / status_mt.getNumbersNumber() * 4;
 }

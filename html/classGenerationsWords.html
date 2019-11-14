@@ -69,18 +69,25 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe <a class="el" href="classGenerationsWords.html" title="Classe GenerationsWords to generate a random word with a dictionnary and a size. ">GenerationsWords</a> to generate a random word with a dictionnary and a size.  
+ <a href="classGenerationsWords.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="generation__words_8hpp_source.html">generation_words.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8e3208b27c01307ca67ae78ad38f2fce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerationsWords.html#a8e3208b27c01307ca67ae78ad38f2fce">GenerationsWords</a> (char *dico)</td></tr>
-<tr class="separator:a8e3208b27c01307ca67ae78ad38f2fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd6b2f15414796f87121ad67edeb00c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerationsWords.html#a4dd6b2f15414796f87121ad67edeb00c">generateWord</a> (short int word_size) const</td></tr>
-<tr class="separator:a4dd6b2f15414796f87121ad67edeb00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4024fd0af467443f0991551a1b8c1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerationsWords.html#a5e4024fd0af467443f0991551a1b8c1e">GenerationsWords</a> (const std::string &amp;dico)</td></tr>
+<tr class="memdesc:a5e4024fd0af467443f0991551a1b8c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Generations Words:: Generations Words object.  <a href="#a5e4024fd0af467443f0991551a1b8c1e">More...</a><br /></td></tr>
+<tr class="separator:a5e4024fd0af467443f0991551a1b8c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b15756ff643ad1a5b5a0934344d048"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerationsWords.html#ae2b15756ff643ad1a5b5a0934344d048">generateWord</a> (short int word_size)</td></tr>
+<tr class="memdesc:ae2b15756ff643ad1a5b5a0934344d048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genere un mot aleatoire suivant une taille donnee.  <a href="#ae2b15756ff643ad1a5b5a0934344d048">More...</a><br /></td></tr>
+<tr class="separator:ae2b15756ff643ad1a5b5a0934344d048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8e3208b27c01307ca67ae78ad38f2fce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e3208b27c01307ca67ae78ad38f2fce">&#9670;&nbsp;</a></span>GenerationsWords()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe <a class="el" href="classGenerationsWords.html" title="Classe GenerationsWords to generate a random word with a dictionnary and a size. ">GenerationsWords</a> to generate a random word with a dictionnary and a size. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5e4024fd0af467443f0991551a1b8c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4024fd0af467443f0991551a1b8c1e">&#9670;&nbsp;</a></span>GenerationsWords()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -91,7 +98,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">GenerationsWords::GenerationsWords </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>dico</em></td><td>)</td>
           <td></td>
         </tr>
@@ -103,24 +110,41 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Construct a new Generations Words:: Generations Words object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dico</td><td>Le dictionnaire a utilise pour la generation des mots </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4dd6b2f15414796f87121ad67edeb00c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dd6b2f15414796f87121ad67edeb00c">&#9670;&nbsp;</a></span>generateWord()</h2>
+<a id="ae2b15756ff643ad1a5b5a0934344d048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b15756ff643ad1a5b5a0934344d048">&#9670;&nbsp;</a></span>generateWord()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * GenerationsWords::generateWord </td>
+          <td class="memname">std::string GenerationsWords::generateWord </td>
           <td>(</td>
           <td class="paramtype">short int&#160;</td>
           <td class="paramname"><em>word_size</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Genere un mot aleatoire suivant une taille donnee. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">word_size</td><td>Longueur du mot souhaite </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string Le mot genere aleatoirement </dd></dl>
 
 </div>
 </div>
