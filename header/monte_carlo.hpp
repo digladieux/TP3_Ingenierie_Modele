@@ -6,12 +6,16 @@
  */
 
 #pragma once
-
+#include "generation_status.hpp"
 class MonteCarlo {
-    public:
-        MonteCarlo() = default ;
-        MonteCarlo(const MonteCarlo&) = delete ;
-        MonteCarlo(const MonteCarlo&&) = delete ;
-        void nExperiencesMonteCarlo(unsigned long long int nb_iterations, const long long int nb_experiences) const ;
-        double monteCarlo(unsigned long long int nb_iterations) const ;
-} ;
+  public:
+    MonteCarlo(const GenerationStatus& generate_status);
+    MonteCarlo(const MonteCarlo&) = delete;
+    MonteCarlo(const MonteCarlo&&) = delete;
+    void nExperiencesMonteCarlo();
+    double monteCarlo();
+    void recoverStatusMT(int index);
+
+  private:
+    GenerationStatus gs;
+};

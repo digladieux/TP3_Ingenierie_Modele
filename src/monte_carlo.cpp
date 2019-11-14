@@ -18,17 +18,19 @@
  * theorique de ce dernier \param nb_experiences Le nombre d'experiences que
  * l'on desire \param nb_iterations Le nombre d'iterations que l'on souhaite
  */
-void MonteCarlo::nExperiencesMonteCarlo(unsigned long long int nb_iterations,
-                            const long long int nb_experiences) const {
+
+MonteCarlo::MonteCarlo(const GenerationStatus& generate_status) : gs(generate_status) {}
+
+void MonteCarlo::recoverStatusMT(int index) {
+    this->gs.recoverStatus(index) ;
+}
+
+void MonteCarlo::nExperiencesMonteCarlo() {
     unsigned long long int i;
     double average_gap = 0;
 
-    if (nb_iterations < 0 && nb_experiences < 0) {
-        throw std::domain_error("Numbers has to be positive");
-    }
-
-    for (i = 0; i < nb_experiences; i++) {
-        double pi = monteCarlo(nb_iterations);
+    for (i = 0; i < gs.getStatusNumber(); i++) {
+        double pi = monteCarlo();
         double tmp = M_PI - pi;
         average_gap += tmp < 0 ? tmp * (-1) : tmp;
         std::cout << "Step n°" << i + 1 << " - Value of Pi : " << pi
@@ -36,7 +38,7 @@ void MonteCarlo::nExperiencesMonteCarlo(unsigned long long int nb_iterations,
         
     }
 
-    average_gap /= nb_experiences;
+    average_gap /= gs.getStatusNumber();
     std::cout << "Average Gap : " << average_gap << std::endl;
 }
 
@@ -48,23 +50,19 @@ void MonteCarlo::nExperiencesMonteCarlo(unsigned long long int nb_iterations,
  * nb_iterations Le nombre d'iterations que l'on souhaite \return La valeur
  * experimentale de PI.
  */
-double MonteCarlo::monteCarlo(unsigned long long int nb_iterations) const {
+double MonteCarlo::monteCarlo() {
     unsigned long long int count = 0;
     unsigned long long int i = 0;
-    CLHEP::MTwistEngine* mercenneTwister = new CLHEP::MTwistEngine();
 
-    if (nb_iterations < 0) {
-        throw std::domain_error("Number of iterations has to be positive");
-    }
 
-    for (i = 0; i < nb_iterations; i++) {
-        double x = mercenneTwister->flat();
-        double y = mercenneTwister->flat();
+    for (i = 0; i < gs.getNumbersNumber(); i++) {
+        double x = gs.getRandomNumber() ;
+        double y = gs.getRandomNumber() ;
         double z = x * x + y * y;
         if (z <= 1) {
             count++;
         }
     }
 
-    return (double)count / nb_iterations * 4;
+    return (double)count / gs.getNumbersNumber() * 4;
 }
