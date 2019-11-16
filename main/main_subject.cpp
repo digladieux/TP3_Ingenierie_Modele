@@ -245,7 +245,3 @@ void Question5_B(StatusMT& status_mt) {
         it.join();
     }
 }
-
-
-
-

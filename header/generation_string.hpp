@@ -1,7 +1,7 @@
 /**
- * @file generation_words.hpp
+ * @file generation_string.hpp
  * @author Gladieux Cunha Dimitri (cdimitri@orange.fr)
- * @brief Fichier d'en tete de generation_words.cpp
+ * @brief Fichier d'en tete de generation_string.cpp
  * @version 1.0
  * @date 14-11-2019
  * 

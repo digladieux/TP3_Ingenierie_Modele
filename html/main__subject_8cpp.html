@@ -77,7 +77,7 @@ $(function() {
 <p>Fichier principal du programme principal.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="status__mt_8hpp_source.html">../header/status_mt.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="generation__words_8hpp_source.html">../header/generation_words.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="generation__string_8hpp_source.html">../header/generation_string.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="monte__carlo_8hpp_source.html">../header/monte_carlo.hpp</a>&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
@@ -88,33 +88,32 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a39b187c76108ba3e8b74b5d2259bc6fe">Question2</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
-<tr class="memdesc:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launching the Question 2.  <a href="#a39b187c76108ba3e8b74b5d2259bc6fe">More...</a><br /></td></tr>
+<tr class="memdesc:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lancement de la question 2.  <a href="#a39b187c76108ba3e8b74b5d2259bc6fe">More...</a><br /></td></tr>
 <tr class="separator:a39b187c76108ba3e8b74b5d2259bc6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaee414b6d222cb9c00f09d09741e392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#aeaee414b6d222cb9c00f09d09741e392">Question2_1</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
-<tr class="memdesc:aeaee414b6d222cb9c00f09d09741e392"><td class="mdescLeft">&#160;</td><td class="mdescRight">QUESTION 2.1. Generate 10 status and save it inside Status/*. Save also the number generated in Numbers/*.  <a href="#aeaee414b6d222cb9c00f09d09741e392">More...</a><br /></td></tr>
+<tr class="memdesc:aeaee414b6d222cb9c00f09d09741e392"><td class="mdescLeft">&#160;</td><td class="mdescRight">QUESTION 2.1. Genere 10 status et les sauvegarde dans Status/*. Sauvegarde aussi les nombres aleatoires dans Numbers/*.  <a href="#aeaee414b6d222cb9c00f09d09741e392">More...</a><br /></td></tr>
 <tr class="separator:aeaee414b6d222cb9c00f09d09741e392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a977e11b1ccc9ae4b67ed30c3b8ddcb97">Question2_2AND3</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
-<tr class="memdesc:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">QUESTION 2.2 AND QUESTION 3. Check if we can recover all the status and check if we have generated the same number.  <a href="#a977e11b1ccc9ae4b67ed30c3b8ddcb97">More...</a><br /></td></tr>
+<tr class="memdesc:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">QUESTION 2.2 AND QUESTION 3. Verifie que l'on retrouve les bons nombres quand on recupere un status sauvegardé*.  <a href="#a977e11b1ccc9ae4b67ed30c3b8ddcb97">More...</a><br /></td></tr>
 <tr class="separator:a977e11b1ccc9ae4b67ed30c3b8ddcb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a5752cf507f3f1ca6f5ad6abc284e8f8c">Question2_3</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
-<tr class="memdesc:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 2_3. We launch 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 10 iterations inside 10 threads.  <a href="#a5752cf507f3f1ca6f5ad6abc284e8f8c">More...</a><br /></td></tr>
+<tr class="memdesc:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 2_3. Lancement de 10 experiences de <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a>, 10 iterations et 10 threads.  <a href="#a5752cf507f3f1ca6f5ad6abc284e8f8c">More...</a><br /></td></tr>
 <tr class="separator:a5752cf507f3f1ca6f5ad6abc284e8f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27a06e84ff5a751754b451d0754ace4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a27a06e84ff5a751754b451d0754ace4e">Question4</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
-<tr class="memdesc:a27a06e84ff5a751754b451d0754ace4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 4. Generation of 10 status with 1 000 000 000 &amp; Generation of 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 1 000 000 000.  <a href="#a27a06e84ff5a751754b451d0754ace4e">More...</a><br /></td></tr>
+<tr class="memdesc:a27a06e84ff5a751754b451d0754ace4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 4. Generation de 10 status avec 2 000 000 000 nombres <br />
+Generation de 10 experiences de <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> avec 1 000 000 000 iterations.  <a href="#a27a06e84ff5a751754b451d0754ace4e">More...</a><br /></td></tr>
 <tr class="separator:a27a06e84ff5a751754b451d0754ace4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9c032cc02d875e53e112751b13edd7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#af9c032cc02d875e53e112751b13edd7e">Question5_B</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
-<tr class="memdesc:af9c032cc02d875e53e112751b13edd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 5.B. Same algorithm as the Question 4, but using threads.  <a href="#af9c032cc02d875e53e112751b13edd7e">More...</a><br /></td></tr>
-<tr class="separator:af9c032cc02d875e53e112751b13edd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf4a20ca2f29c4d639f517354085a1e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#aaf4a20ca2f29c4d639f517354085a1e0">Question5_A</a> ()</td></tr>
-<tr class="memdesc:aaf4a20ca2f29c4d639f517354085a1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 5.A. Find the word gattaca with the dictionnary acgtand give some statistic.  <a href="#aaf4a20ca2f29c4d639f517354085a1e0">More...</a><br /></td></tr>
+<tr class="memdesc:aaf4a20ca2f29c4d639f517354085a1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 5.A. 1) Trouve le mot gattaca avec le dictionnaire acgt 2) Calcul la probabilite d'obtenir la phrase Le hasard n'est pas un programme. 3) Calcul la probabilite d'obtenir un ADN humain (3 milliard de base)  <a href="#aaf4a20ca2f29c4d639f517354085a1e0">More...</a><br /></td></tr>
 <tr class="separator:aaf4a20ca2f29c4d639f517354085a1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af97d03642cb230cfe2c67890938bd632"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#af97d03642cb230cfe2c67890938bd632">doubleAlmostEqual</a> (double a, double b)</td></tr>
-<tr class="memdesc:af97d03642cb230cfe2c67890938bd632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Savoir si 2 doubles sont egaux.  <a href="#af97d03642cb230cfe2c67890938bd632">More...</a><br /></td></tr>
-<tr class="separator:af97d03642cb230cfe2c67890938bd632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8766aa8a94571480a9ce97d3bde3dd67"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a8766aa8a94571480a9ce97d3bde3dd67">CountGenerationWord</a> (const std::string &amp;dictionnary, const std::string &amp;word_to_find)</td></tr>
-<tr class="separator:a8766aa8a94571480a9ce97d3bde3dd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac365a008259faa0884ddac0a10114b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#ac365a008259faa0884ddac0a10114b77">displayStatistic</a> (unsigned long long int counts[], short int nb_experiences, double theoric_probability)</td></tr>
+<tr class="memdesc:ac365a008259faa0884ddac0a10114b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les statistiques a l'utilisateur.  <a href="#ac365a008259faa0884ddac0a10114b77">More...</a><br /></td></tr>
+<tr class="separator:ac365a008259faa0884ddac0a10114b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c032cc02d875e53e112751b13edd7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#af9c032cc02d875e53e112751b13edd7e">Question5_B</a> (<a class="el" href="classStatusMT.html">StatusMT</a> &amp;status_mt)</td></tr>
+<tr class="memdesc:af9c032cc02d875e53e112751b13edd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Question 5.B. Meme algo que la question 4 (Monte Carlo 10 experiences, 1 Milliards iterations) mais en utilisant des threads.  <a href="#af9c032cc02d875e53e112751b13edd7e">More...</a><br /></td></tr>
+<tr class="separator:af9c032cc02d875e53e112751b13edd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__subject_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main of the program.  <a href="#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main du programme.  <a href="#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -129,23 +128,29 @@ Variables</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>14-11-2019 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2019 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8766aa8a94571480a9ce97d3bde3dd67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8766aa8a94571480a9ce97d3bde3dd67">&#9670;&nbsp;</a></span>CountGenerationWord()</h2>
+<a id="ac365a008259faa0884ddac0a10114b77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac365a008259faa0884ddac0a10114b77">&#9670;&nbsp;</a></span>displayStatistic()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long long int CountGenerationWord </td>
+          <td class="memname">void displayStatistic </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>dictionnary</em>, </td>
+          <td class="paramtype">unsigned long long int&#160;</td>
+          <td class="paramname"><em>counts</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>word_to_find</em>&#160;</td>
+          <td class="paramtype">short int&#160;</td>
+          <td class="paramname"><em>nb_experiences</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theoric_probability</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,45 +160,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="af97d03642cb230cfe2c67890938bd632"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af97d03642cb230cfe2c67890938bd632">&#9670;&nbsp;</a></span>doubleAlmostEqual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool doubleAlmostEqual </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Savoir si 2 doubles sont egaux. </p>
+<p>Affiche les statistiques a l'utilisateur. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>1er nombre </td></tr>
-    <tr><td class="paramname">b</td><td>2eme nombre </td></tr>
+    <tr><td class="paramname">counts</td><td>Tableau qui contient le nombre d'iterations a chaque recherche du mot gattaca </td></tr>
+    <tr><td class="paramname">nb_experiences</td><td>Le nombre d'experience </td></tr>
+    <tr><td class="paramname">theoric_probability</td><td>La probabilite theorique de l'experience </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Les nombres sont egaux </dd>
-<dd>
-false Les nombres sont differents </dd></dl>
 
 </div>
 </div>
@@ -223,15 +198,15 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Main of the program. </p>
+<p>Main du programme. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc</td><td>Number of argument </td></tr>
-    <tr><td class="paramname">argv</td><td>Arguments in command line </td></tr>
+    <tr><td class="paramname">argc</td><td>Nombre d'arguments </td></tr>
+    <tr><td class="paramname">argv</td><td>Arguments en ligne de commande </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int The error number </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Le code erreur </dd></dl>
 
 </div>
 </div>
@@ -251,10 +226,10 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Launching the Question 2. </p>
+<p>Lancement de la question 2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+    <tr><td class="paramname">status_mt</td><td>La classe qui gere les status de MT </td></tr>
   </table>
   </dd>
 </dl>
@@ -277,10 +252,10 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>QUESTION 2.1. Generate 10 status and save it inside Status/*. Save also the number generated in Numbers/*. </p>
+<p>QUESTION 2.1. Genere 10 status et les sauvegarde dans Status/*. Sauvegarde aussi les nombres aleatoires dans Numbers/*. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+    <tr><td class="paramname">status_mt</td><td>La classe qui gere les status de MT </td></tr>
   </table>
   </dd>
 </dl>
@@ -303,10 +278,10 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>QUESTION 2.2 AND QUESTION 3. Check if we can recover all the status and check if we have generated the same number. </p>
+<p>QUESTION 2.2 AND QUESTION 3. Verifie que l'on retrouve les bons nombres quand on recupere un status sauvegardé*. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+    <tr><td class="paramname">status_mt</td><td>La classe qui gere les status de MT </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,10 +304,10 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Question 2_3. We launch 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 10 iterations inside 10 threads. </p>
+<p>Question 2_3. Lancement de 10 experiences de <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a>, 10 iterations et 10 threads. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+    <tr><td class="paramname">status_mt</td><td>La classe qui gere les status de MT </td></tr>
   </table>
   </dd>
 </dl>
@@ -355,10 +330,11 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Question 4. Generation of 10 status with 1 000 000 000 &amp; Generation of 10 <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> experiences with 1 000 000 000. </p>
+<p>Question 4. Generation de 10 status avec 2 000 000 000 nombres <br />
+Generation de 10 experiences de <a class="el" href="classMonteCarlo.html" title="Class MonteCarlo pour la generation de cette experience avec l&#39;utilisation de Mercenne Twister...">MonteCarlo</a> avec 1 000 000 000 iterations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_mt</td><td>The class to manage the status </td></tr>
+    <tr><td class="paramname">status_mt</td><td>La classe qui gere les status de MT </td></tr>
   </table>
   </dd>
 </dl>
@@ -380,7 +356,7 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Question 5.A. Find the word gattaca with the dictionnary acgtand give some statistic. </p>
+<p>Question 5.A. 1) Trouve le mot gattaca avec le dictionnaire acgt 2) Calcul la probabilite d'obtenir la phrase Le hasard n'est pas un programme. 3) Calcul la probabilite d'obtenir un ADN humain (3 milliard de base) </p>
 
 </div>
 </div>
@@ -400,10 +376,10 @@ false Les nombres sont differents </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Question 5.B. Same algorithm as the Question 4, but using threads. </p>
+<p>Question 5.B. Meme algo que la question 4 (Monte Carlo 10 experiences, 1 Milliards iterations) mais en utilisant des threads. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">status_mt</td><td></td></tr>
+    <tr><td class="paramname">status_mt</td><td>La classe qui gere les status de MT </td></tr>
   </table>
   </dd>
 </dl>

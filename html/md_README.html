@@ -68,8 +68,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h2>Architecture</h2>
 <p>Vous retrouverez dans ce projet</p><ul>
-<li>Un dossier <b>build</b> pour tous les fichiers .o générés à la compilation</li>
-<li>Un dossier <b>exe</b> pour les 2 executables<ul>
+<li>Un dossier <b>build</b> pour tous les fichiers .o générés à la compilation, les fichiers CMake, les executables<ul>
 <li><b>question1</b> pour répondre à la question numéro 1</li>
 <li><b>subject</b> pour répondre aux autres question</li>
 </ul>
@@ -82,38 +81,29 @@ $(function() {
 <li>Un fichier <b>cppcheck.txt</b> pour les améliorations possibles du code détecter par l'outil Cpp Check</li>
 <li>Un fichier <b>Dockerfile</b> pour la configuration de docker (optionnel)</li>
 <li>Un fichier <b>doxyfile</b> pour la configuration de la génération de la documentation</li>
-<li>Un fichier <b>Makefile</b> pour la génération des executables</li>
 </ul>
-<h2>Le Makefile</h2>
-<p>Le Makefile permet de générer 2 executables comme énoncé précédemment. Quelques commandes utiles pour la génération des éxécutables. Toutefois, je vous conseille d'utiliser uniquement la dernière pour la génération du programme.</p>
-<h3>Génération du code</h3>
+<h2>Le CMake</h2>
+<p>Le CMakeLists.txt permet de générer 2 executables comme énoncé précédemment. Il faut aller dans le dossier <b>build</b>, et ensuite lancer les commandes</p>
 <ul>
-<li><b>make exe/question1</b> : Génération de l'executable pour la question 1</li>
-<li><b>make exe/subject</b> : Génération de l'executable pour les autres questions</li>
-</ul>
-<h3>Autres</h3>
-<ul>
-<li><b>make</b> : Affiche de l'aide pour l'utilisation des différentes commandes</li>
+<li><b>cmake ..</b> : Génération des fichiers makefiles</li>
+<li><b>make</b> : Génération des 2 executables</li>
 <li><b>make clean</b> : Nettoyer le repository</li>
-<li><b>make check</b> : Lance l'outil Cpp Check pour améliorer le code.</li>
 </ul>
 <h2>Outils</h2>
 <h3>Markdown</h3>
 <p>Pour la création de ce README, j'ai utilisé l'extension de fichier .md. On peut par la suite exporter ceci sous format .pdf ou .html.</p>
 <h3>Cpp Check</h3>
-<p>L'outil Cpp Check permet d'observer des warnings plus poussé et des améliorations possibles de notre code</p>
+<p>L'outil Cpp Check permet d'observer des warnings plus poussé et des améliorations possibles de notre code. Il est lancé a chaque fois lors du <code>make</code></p>
 <h3>Docker</h3>
 <p>Docker permet de créer une image, et par la suite un container de mon projet. Il permet donc de connaître les caractéristiques de mon environment. L'application fonctionnera très bien sans installer Docker, je vous donne juste mon Dockerfile si vous voulez regarder.</p>
 <h3>Doxygen</h3>
 <p>J'ai généré une documentation pour le programme avec l'outil doxygen. Pour la génération de la documentation, vous devez lancer la commande <b>doxygen doxyfile</b>. Sinon vous pouvez consulter directement le dossier html</p>
 <h2>Le sujet</h2>
 <h3>Question 1</h3>
-<p>Les bibliothèques CHLEF sont bien installées et insérées dans le dossier Random. Pour tester le bon fonctionnement de ce dernier, on utilise le main dans le fichier <a class="el" href="test_8cc.html">main/test.cc</a></p>
-<h3>Question 2</h3>
+<p>Les bibliothèques CHLEF sont bien installées et insérées dans le dossier Random. Pour tester le bon fonctionnement de ce dernier, on execute l'exe </p><h3>Question 2</h3>
 <h3>Question 3</h3>
 <h3>Question 4</h3>
 <h3>Question 5</h3>
-<h3>Question 6</h3>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

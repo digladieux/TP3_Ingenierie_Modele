@@ -1,3 +1,14 @@
+/**
+ * @file generation_string.cpp
+ * @author Gladieux Cunha Dimitri (cdimitri@orange.fr)
+ * @brief Fichier pour l'implementation des fonctions de generation de string
+ * @version 1.0
+ * @date 16-11-2019
+ * 
+ * @copyright Copyright (c) 2019
+ * 
+ */
+
 #include "../header/generation_string.hpp"
 #include "../Random/CLHEP/Random/MTwistEngine.h"
 
