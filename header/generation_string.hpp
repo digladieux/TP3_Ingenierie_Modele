@@ -15,16 +15,17 @@
 #include <string>
 
 /**
- * @brief Classe GenerationsWords to generate a random word with a dictionnary and a size
+ * @brief Classe GenerationString to generate a random string with a dictionnary
  * 
  */
-class GenerationsWords {
+class GenerationString {
     public :
-        explicit GenerationsWords(const std::string& dico) ;
+        explicit GenerationString(const std::string& dico) ;
         std::string generateWord(short int word_size);
+        unsigned long long int tryGenerateString(const std::string& word_to_find) ;
+
     private :
         std::string dictionnary ;
-        CLHEP::MTwistEngine mercenneTwister{};
 
 
 };

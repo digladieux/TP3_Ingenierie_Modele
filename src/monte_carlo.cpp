@@ -14,36 +14,20 @@
 #include <exception>
 
 /**
- * @brief Construct a new Monte Carlo:: Monte Carlo object
- * 
- * @param status The status to copy for MonteCarlo
- */
-MonteCarlo::MonteCarlo(const StatusMT& status) : status_mt(status) {}
-
-/**
- * @brief Launch the function to recover the status of MT
- * 
- * @param index The status you want to recover
- */
-void MonteCarlo::recoverStatusMT(int index) {
-    this->status_mt.recoverStatus(index);
-}
-
-/**
- * @brief Methode effectuant n experiences de Monte Carlo, avec m iterations. On definit si on
- * souhaite utiliser des nombres deja genere ou non. On calcul aussi l'ecart a
+ * @brief Methode effectuant n experiences de Monte Carlo, avec m iterations. On calcul aussi l'ecart a
  * la moyenne entre les resultats experimentaux du calcul de PI et la valeur
  * theorique de ce dernier
- *
+ * 
+ * @param status_mt La classe qui gere les status de MT
  */
-void MonteCarlo::nExperiencesMonteCarlo() {
+void MonteCarlo::nExperiencesMonteCarlo(const StatusMT& status_mt) {
     unsigned long long int i;
     double average_gap = 0;
 
     for (i = 0; i < status_mt.getStatusNumber(); i++) {
-        double pi = monteCarlo();
+        double pi = monteCarlo(status_mt, i);
         double tmp = M_PI - pi;
-        average_gap += tmp < 0 ? tmp * (-1) : tmp;
+        average_gap += std::abs(M_PI - pi);
         std::cout << "Step n°" << i + 1 << " - Value of Pi : " << pi << std::endl;
     }
 
@@ -55,13 +39,16 @@ void MonteCarlo::nExperiencesMonteCarlo() {
  * @brief Fonction effectuant une experience de Monte Carlo, avec m iterations.
  * @return double La valeur experimentale de PI.
  */
-double MonteCarlo::monteCarlo() {
+double MonteCarlo::monteCarlo(const StatusMT& status_mt, int index_file) {
     unsigned long long int count = 0;
     unsigned long long int i = 0;
-
-    for (i = 0; i < status_mt.getNumbersNumber(); i++) {
-        double x = status_mt.getRandomNumber();
-        double y = status_mt.getRandomNumber();
+    CLHEP::MTwistEngine mercenneTwister{} ;
+    std::stringstream ss ;
+    ss << "../Status/" << index_file << ".conf" ;
+    mercenneTwister.restoreStatus(ss.str().c_str()) ;
+    for (i = 0; i < status_mt.getNumbersNumber() ; i++) {
+        double x = mercenneTwister.flat();
+        double y = mercenneTwister.flat();
         double z = x * x + y * y;
         if (z <= 1) {
             count++;

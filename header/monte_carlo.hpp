@@ -4,26 +4,22 @@
  * @brief Fichier d'en tete de monte_carlo.cpp
  * @version 1.0
  * @date 14-11-2019
- * 
+ *
  * @copyright Copyright (c) 2019
- * 
+ *
  */
 #pragma once
 #include "status_mt.hpp"
 
 /**
  * @brief Class MonteCarlo pour la generation de cette experience avec l'utilisation de Mercenne Twister
- * 
+ *
  */
 class MonteCarlo {
   public:
-    MonteCarlo(const StatusMT& status);
+    explicit MonteCarlo() = default;
     MonteCarlo(const MonteCarlo&) = delete;
     MonteCarlo(const MonteCarlo&&) = delete;
-    void nExperiencesMonteCarlo();
-    double monteCarlo();
-    void recoverStatusMT(int index);
-
-  private:
-    StatusMT status_mt;
+    void nExperiencesMonteCarlo(const StatusMT& status_mt);
+    double monteCarlo(const StatusMT& status_mt, int index_file) ;
 };

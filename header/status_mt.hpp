@@ -30,7 +30,6 @@ class StatusMT {
         void setValues(int status_nb, unsigned long long int numbers_nb, bool save_number) ;
         unsigned int getStatusNumber() const;
         unsigned long long int getNumbersNumber() const;
-        double getRandomNumber() ;
 
     private:
         

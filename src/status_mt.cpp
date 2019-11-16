@@ -151,15 +151,6 @@ unsigned long long int StatusMT::getNumbersNumber() const {
 }
 
 /**
- * @brief Generation d'un nombre aleatoire grace a MT
- * 
- * @return double Le nombre aleatoire genere
- */
-double StatusMT::getRandomNumber() {
-    return this -> mercenneTwister.flat() ;
-}
-
-/**
  * @brief Changer les valeurs des status. Par consequent il faut regenerer les status en consequent
  * 
  * @param status_nb Le nombre de status a generer
